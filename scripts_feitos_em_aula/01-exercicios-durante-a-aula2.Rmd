@@ -1,0 +1,138 @@
+---
+title: "Exercícios durante a aula 2"
+author: "Curso-R"
+date: "8/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Pacotes
+
+```{r, message=FALSE, warning=FALSE}
+library(broom)
+library(readxl)
+library(janitor)
+library(MASS)
+library(lime)
+library(GGally)
+library(car)
+library(ISLR)
+library(tidymodels)
+library(tidyverse)
+```
+
+
+## Exercício 15: interações
+```{r}
+iris %>%
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(aes(colour = Species)) +
+  geom_smooth(method = "lm", se = FALSE, colour = "black") +
+  geom_smooth(method = "lm", aes(colour = Species), se = FALSE) +
+  theme(legend.position = "bottom")
+
+glimpse(iris)
+```
+
+O Modelo abaixo ajusta `Sepal.Width` (resposta) explicada por 
+
+- Sepal.Length (variável contínua)
+- Species (Variável categórica)
+- Interações entre Sepal.Length e Species.
+
+```{r}
+modelo_iris <- lm(Sepal.Width ~ Sepal.Length * Species, data = iris)
+```
+
+Utilizando o `model.matrix()`, veja como que fica a matriz do modelo. Quantas colunas existem?
+
+```{r}
+model.matrix(Sepal.Width ~ Sepal.Length * Species, data = iris)
+```
+
+## Exercício 16
+
+
+```{r}
+summary(modelo_iris)
+```
+
+
+Consultando o `summary(modelo_iris)` acima e usando `geom_abline()`, desenhe no gráfico abaixo uma reta que coincida com a reta veremelha da setosa. Repita o procedimento para versicolor.
+
+OBS: Já tem um exemplo de resolução para o caso da versicolor! Copie e cole o código para ajudar na resolução.
+
+```{r}
+iris %>%
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(aes(colour = Species)) +
+  geom_smooth(method = "lm", se = FALSE, colour = "black") +
+  geom_smooth(method = "lm", aes(colour = Species), se = FALSE) +
+  geom_abline(intercept = -0.5694 + 2.0157, slope = 0.7985 - 0.5666, colour = "purple") + # << EXEMPLO!!
+  theme(legend.position = "bottom")
+```
+
+## Exercício 17
+
+Interprete os parâmetros.
+
+```{r}
+summary(modelo_iris)
+```
+
+
+## Exercício 18
+
+Dentro do `mutate()`, usamos a função `fct_relevel()` para colocar versicolor como o nível de referência da variável `Species`. 
+
+
+```{r}
+iris <- iris %>%
+  mutate(
+    Species = fct_relevel(Species, "versicolor"),
+    Species = if_else(Species == "setosa", "setosa", "versicolor ou virginica")
+  )
+```
+
+Ajustando o mesmo modelo novamente.
+
+```{r}
+modelo_iris <- lm(Sepal.Width ~ Sepal.Length * Species, data = iris)
+summary(modelo_iris)
+```
+
+- O valor do R2 mudou? 
+- As estimativas dos parâmetros mudaram? Por quê? 
+- Algum termo ficou sem valor-p alto?
+
+
+## Exercício 19
+
+Considerando apenas as colunas `Limit`, `Age` e `Rating` da tabela `Credit`:
+
+1) ajuste uma regressã linear para Balance.
+2) calcule os VIFs dos 3 preditores usando a função vif().
+
+```{r}
+glimpse(Credit)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
