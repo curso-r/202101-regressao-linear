@@ -25,20 +25,6 @@ install.packages("usethis")
 usethis::create_project("caminho_ate_o_projeto/nome_do_projeto")
 ```
 
-#### Passo 3: Baixar o material
-
-Certifique que você está dentro do projeto criado no passo 2 e rode o
-código abaixo.
-
-**Observação**: Assim que rodar o código abaixo, o programa vai pedir
-uma escolha de opções. Escolha o número correspondente ao curso de
-Regressão Linear\!
-
-``` r
-# Baixar ou atualizar material do curso
-CursoR::atualizar_material()
-```
-
 ## Slides
 
 | slide                              | link                                                                                 |
@@ -63,7 +49,21 @@ CursoR::atualizar_material()
   - [R for Data Science (Wickham H)](https://r4ds.had.co.nz/)
   - [Advanced R (Wickham H)](https://adv-r.hadley.nz/)
 
-#### Regressão Linear
+#### Regressão Linear - Inferência
+
+  - [Ciência de Dados: Fundamentos e
+    Aplicações](https://curso-r.github.io/main-regressao-linear/referencias/Ci%C3%AAncia%20de%20Dados.%20Fundamentos%20e%20Aplica%C3%A7%C3%B5es.%20Vers%C3%A3o%20parcial%20preliminar.%20maio%20Pedro%20A.%20Morettin%20Julio%20M.%20Singer.pdf)
+  - [Livro do Gilberto
+    Paula](https://www.ime.usp.br/~giapaula/texto_2013.pdf)
+  - Estatística básica 7a edição - BUSSAB e MORETTIN
+  - [Tese sobre Regressão Linear da Sandra
+    Rodrigues](https://ubibliorum.ubi.pt/bitstream/10400.6/1869/1/Tese%20Sandra%20Rodrigues.pdf)
+  - [Aplicação de Regressão Linear
+    Simples](https://www.ime.usp.br/~giapaula/slides_exemplo_cfoguete.pdf)
+  - [Introduction to Econometrics with
+    R](https://www.econometrics-with-r.org/6-5-the-distribution-of-the-ols-estimators-in-multiple-regression.html)
+
+#### Regressão Linear - Predição
 
   - [Introduction to Statistical Learning (Hastie, et
     al)](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
@@ -75,12 +75,3 @@ CursoR::atualizar_material()
   - [Feature Engineering and Selection: A Practical Approach for
     Predictive Models (Kuhn, Kjell)](http://www.feat.engineering/)
   - [Kaggle](https://www.kaggle.com/)
-  - [Livro do Gilberto
-    Paula](https://www.ime.usp.br/~giapaula/texto_2013.pdf)
-  - Estatística básica 7a edição - BUSSAB e MORETTIN
-  - [Tese sobre Regressão Linear da Sandra
-    Rodrigues](https://ubibliorum.ubi.pt/bitstream/10400.6/1869/1/Tese%20Sandra%20Rodrigues.pdf)
-  - [Aplicação de Regressão Linear
-    Simples](https://www.ime.usp.br/~giapaula/slides_exemplo_cfoguete.pdf)
-  - [Introduction to Econometrics with
-    R](https://www.econometrics-with-r.org/6-5-the-distribution-of-the-ols-estimators-in-multiple-regression.html)
