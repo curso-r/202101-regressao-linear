@@ -36,7 +36,7 @@ Faça um projeto do RStudio para usar durante todo o curso e em seguida abra-o.
 
 ```{r, eval=FALSE}
 install.packages("usethis")
-usethis::create_project("caminho_ate_o_projeto/nome_do_projeto")
+usethis::create_project("regressaolinear202101")
 ```
 
 ## Slides
