@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 library(magrittr)
 
 main_repo <- "main-regressao-linear"
-turma <- "202008-regressao-linear"
+turma <- "202101-regressao-linear"
 ```
 
 ## Configuração inicial
@@ -85,7 +85,7 @@ knitr::kable(
 #### Regressão Linear - Predição
 
 - [Aprendizagem de Máquinas: Uma Abordagem Estatística (Rafael Izbicki e Thiago Mendonça, 2020)](http://www.rizbicki.ufscar.br/AME.pdf)
-- [Introduction to Statistical Learning (Hastie, et al)](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+- [Introduction to Statistical Learning (Hastie, et al)](https://www.ime.unicamp.br/~dias/Intoduction%20to%20Statistical%20Learning.pdf)
 - [Elements of Statistical Learning (Hastie, et al)](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
 - [Computer Age Statistical Inference (Hastie, Efron)](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
 - [Tidymodels (Kuhn, et al)](https://www.tidymodels.org/)

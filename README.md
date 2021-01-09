@@ -65,7 +65,7 @@ usethis::create_project("regressaolinear202101")
   - [Aprendizagem de Máquinas: Uma Abordagem Estatística (Rafael Izbicki
     e Thiago Mendonça, 2020)](http://www.rizbicki.ufscar.br/AME.pdf)
   - [Introduction to Statistical Learning (Hastie, et
-    al)](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
+    al)](https://www.ime.unicamp.br/~dias/Intoduction%20to%20Statistical%20Learning.pdf)
   - [Elements of Statistical Learning (Hastie, et
     al)](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
   - [Computer Age Statistical Inference (Hastie,
