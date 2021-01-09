@@ -34,8 +34,9 @@ usethis::create_project("regressaolinear202101")
 
 ## Scripts usados em aula
 
-| script | link |
-| :----- | :--- |
+| script             | link                                                                                          |
+| :----------------- | :-------------------------------------------------------------------------------------------- |
+| 00-laboratorio.Rmd | <https://curso-r.github.io/202101-regressao-linear/scripts_feitos_em_aula/00-laboratorio.Rmd> |
 
 ## Referências
 
