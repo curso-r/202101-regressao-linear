@@ -62,6 +62,8 @@ usethis::create_project("regressaolinear202101")
 
 #### Regressão Linear - Predição
 
+  - [Aprendizagem de Máquinas: Uma Abordagem Estatística (Rafael Izbicki
+    e Thiago Mendonça, 2020)](http://www.rizbicki.ufscar.br/AME.pdf)
   - [Introduction to Statistical Learning (Hastie, et
     al)](http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf)
   - [Elements of Statistical Learning (Hastie, et
