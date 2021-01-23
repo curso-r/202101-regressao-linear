@@ -223,14 +223,51 @@ Credit %>%
 set.seed(1)
 y_x <- tibble(
   x = runif(60),
-  y = 10 + 0.5*log(x) + rnorm(30, sd = 0.1)
-) %>%
+    y = 500 + 1 * x + 0.5 * x^2 - 0.3 * x^3+ rnorm(30, sd = 0.01)
+) %>% select(y, x)
+
+
+y_x$x2 <- y_x$x^2
+y_x$x3 <- y_x$x^3
+
+
+y_x
+
+# regressão polinomial
+summary(lm(y ~ x+x2+x3, data = y_x))
+plot(lm(y ~ poly(x,2), data = y_x))
+```
+
+
+
+
+
+
+
+
+
+
+```{r}
+y_x$x2 <- log(y_x$x)
+
+
+y_x %>%
   mutate(
     x2 = log(x)
   )
 
-ggplot(y_x) + geom_point(aes(x = x2, y = y))
+
+y = b0 + b1*log(x)
+ggplot(y_x, aes(x = sqrt(x), y = y)) + geom_point() + geom_smooth(method = "lm")
 ```
+
+```{r}
+y_x %>% mutate_all(round, digits = 1)
+```
+```{r}
+meu_modelo <- lm(y ~ x2, data = y_x)
+```
+
 
 Use `lm()` para ajustar os seguintes modelos:
 
